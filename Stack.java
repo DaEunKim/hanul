@@ -19,7 +19,6 @@ public class Stack {
 			if(order.contains("push")){
 				X = in.nextInt();
 				count++;
-				i++;
 			}
 			
 			if(order.contains("size")){
