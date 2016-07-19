@@ -15,39 +15,39 @@ public class Stack {
 		for(int i =0;i<N;i++){
 			String order = in.next();
 			
-			arr[i] = X;
 			if(order.contains("push")){
 				X = in.nextInt();
+				arr[count] = X;
 				count++;
 			}
 			
 			if(order.contains("size")){
 				if(count<0)
-					System.out.println("0");
+					System.out.println(0);
 				else
 					System.out.println(count);
 			}
 
 			if(order.contains("pop")){
-				count--;
-				if(count<0){
-					System.out.println("-1");
+				if(count<=0){
+					System.out.println(-1);
 				}
 				else{
-					System.out.println(arr[i]);
+					count--;
+					System.out.println(arr[count]);
 				}
 			}
 			if(order.contains("empty")){
 				if(count<=0)
-					System.out.println("1");
+					System.out.println(1);
 				else
-					System.out.println("0");
+					System.out.println(0);
 			}
 			if(order.contains("top")){
-				if(arr[i]<0)
-					System.out.println("-1");
+				if(count<=0)
+					System.out.println(-1);
 				else
-					System.out.println(arr[i]);
+					System.out.println(arr[count-1]);
 			}
 		}
 
