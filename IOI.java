@@ -6,22 +6,20 @@ public class IOI {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		String I = in.nextLine();
-		//int count[]= new int[1000];
-		int count1 [] = new int [1000];
-		int count2 [] = new int[1000];
+		String IOI = in.nextLine();
+		int count1=0;
+		int count2=0;
+		String J = "JOI";
+		char arr[] = new char[10000];
 		
-		for(int i=0;i<I.length();i++){
+		for(int i=0;i<IOI.length();i++){
+			char s = IOI.charAt(i);
+			arr[i] = s;
+//			if(s=="JOI")
+//				break;
 			
-			if(I.contains("JOI")==true)
-				count1[I.indexOf("JOI")]++;
-			if(I.contains("IOI")==true)
-				count2[I.indexOf("JOI")]++;
-			
-		
-			
+			System.out.println(s);
 		}
-		System.out.println(count1);
 		
 	}
 
