@@ -28,8 +28,6 @@ public class Minority {
 		for(int i=2; i<num; i++){
 			if(num%i==0)
 				return false;
-			if(num%num==0 && num/1==num)
-				return true;
 		}
 		return true;
 	}

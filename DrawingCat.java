@@ -1,6 +1,6 @@
 package hanul;
 
-public class Cat {
+public class DrawingCat {
 
 	public static void main(String[] args) {
 		String a= "\\";
