@@ -5,25 +5,28 @@ import java.util.Scanner;
 public class Perfect_square_num {
 
 	public static void main(String[] args) {
+						
 		Scanner in = new Scanner(System.in);
 		int M = in.nextInt();
 		int N = in.nextInt();
-		int arr[] = new int[10000];
+		int square =0;
 		int sum =0;
-		
-		double a = Math.sqrt(M);
-		double b = Math.sqrt(N);
-		int a1 = (int)a;
-		int b1 = (int)b;
-		
-		for(int i=a1+1;i<=b1;i++){
-			arr[i] = i*i;
-			if(arr[i]>=M && arr[i]<=N)
-				sum += arr[i];
-			else
-				System.out.println("-1");
+		int min = 110000;
+	
+		for(int i =1;i<=100;i++){
+			square = i*i;
+			if(square>=M && square<=N){
+				sum+=square;
+				if(min>square){
+					min = square;
+				}
+			}
 		}
-		System.out.println(sum);
-		System.out.println(arr[a1+1]);
+		if(sum==0)
+			System.out.println("-1");
+		else{
+			System.out.println(sum);
+			System.out.println(min);
+		}
 	}
 }
